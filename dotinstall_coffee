@@ -1,0 +1,161 @@
+###
+文字列
+###
+
+# ヒアドキュメント
+s = """
+fewaawefwaf
+"""
+
+# 変数の展開
+name = "taguchi"
+alert "hi, #{name}"
+
+
+###
+配列, 連想配列
+###
+
+a0 = [1, 3, 3]
+
+a1 = [
+  1, 5, 8
+  2, 4, 2
+]
+
+# 配列のネスト
+a2 = 
+	'sato': 
+		'sales': 200
+		'cost': 80
+	'sasaki':
+		'sales': 200
+		'cost': 80
+
+# 範囲演算子
+a4 = [1..5] # 1から5
+a4 = [1...5] # 1から4
+
+
+###
+if 文 ①
+###
+
+signal = 'red'
+
+if signal == 'red'
+	alert 'stop'
+else if signal == 'green'
+	alert 'go'
+else 
+	alert 'caution!'
+
+
+
+###
+if 文 ②
+
+* 比較演算子
+is (===) isnt (!===)
+not (!)
+and (&&)
+or (||)
+
+* 後置 if
+
+###
+
+x = 20
+
+# 連結比較式
+if 10 < x < 30
+	alert 'true!'
+
+# 後置のif
+alert 'true' if 10 < x < 30
+
+###
+switch 
+### 
+
+signal = 'red'
+
+switch signal
+	when 'red'
+		alert 'stop!'
+	when 'green'
+		alert 'go!'
+	else 
+		alert 'caution'
+
+# thenによる１行出の書き方
+switch signal
+	when 'red then alert 'stop!'
+	when 'green' then alert 'go!'
+	else then alert 'caution'
+
+###
+存在チェックの演算子
+###
+
+# undefindのチェック
+alert 'ok!' if name?
+
+###
+for ループ
+###
+
+# ループ
+for i in [0..3]
+	alert i	
+
+a = ['tanaka', 'taguchi', 'sasaki']
+
+for i, index in a
+	alert "hi, #{index}, #{i}"
+
+
+###
+関数
+
+function hello() {
+	
+}
+
+hello = (s = 'taguchi') -> 
+	alert "hello, #{s}"
+
+hello('tom')
+
+###
+
+###
+関数 (返り値)
+###
+
+sum = (a, b) ->
+	return (a + b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
